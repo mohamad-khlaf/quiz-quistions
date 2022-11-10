@@ -1,0 +1,89 @@
+body {
+  background: #eee;
+  position: relative;
+  min-height: 300vh;
+  margin: 0%;
+  padding: 0px;
+  background-color: beige;
+}
+a {
+    text-decoration: none;
+}
+
+/* ------------------------- */
+.media-icons {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    left: -50px;
+    transform: translateY(-50%);
+    gap: 20px;
+    background: white;
+    padding: 6px;
+    border-radius: 6px;
+    transition: .3s;
+}
+.media-icons.active {
+    left: 0px;
+}
+
+.media-icons a {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    background: var(--color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+}
+
+.media-icons i {
+    font-size: 20px;
+    color: white;
+    background-color: var(--color);
+}
+.media-icons .tooltip {
+    position: absolute;
+    left: 100%;
+    padding: 10px 20px;
+    background:  var(--color);
+    color: white;
+    border-radius: 8px;
+    margin: auto 20px;
+    opacity: 0;
+    transition: opacity .3s, letter-spacing .5s;
+    pointer-events: none;
+    letter-spacing: 7px;
+}
+
+.media-icons .tooltip::before {
+    content: "";
+    border: 8px solid transparent;
+    border-right-color: var(--color);
+    display: inline-block;
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.media-icons a:hover .tooltip {
+    opacity: 1;
+    letter-spacing: 0px;
+}
+.share {
+
+    position: fixed;
+    top: 73%;
+    left: 6px;
+    z-index: 9999;
+    width: 112px;
+    text-align: center;
+    line-height: 35px;
+    color: white;
+    background: var(--color);
+    border-radius: 8px;
+    cursor: pointer;
+}
+

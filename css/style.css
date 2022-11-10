@@ -1,0 +1,149 @@
+* {
+    margin: 0%;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: tahoma,'Courier New', Courier, monospace;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quiz-app {
+    background: #f8f8f8;
+    padding: 15px;
+    width: 700px;
+    box-shadow: 16px 16px 9px 0px #eed8d8;
+    border-radius: 6px;
+    border: 5px solid #e7c4c4ba;
+}
+/* ---------------------------- */
+.quiz-info {
+    background: white;
+    padding: 20px;
+    display: flex;
+    gap: 12px;
+}
+
+
+
+.quiz-info .category, 
+.quiz-info .count {
+    flex: 1;
+}
+.quiz-info .count {
+    text-align: right;
+}
+
+.quiz-info span {
+    color: blue;
+}
+/* ---------------------------- */
+.quiz-area {
+    padding: 20px;
+    background: white;
+    margin-top: 15px;
+}
+/* ---------------------------- */
+
+.answers-area {
+    padding: 20px;
+    background: white;
+    margin-top: 15px;
+}
+.answers-area .answer {
+    background: #f4e9e9bf;
+    position: relative;
+    
+    margin-top: 10px;
+}
+.answers-area .answer input {
+    position: absolute;
+    left: 10px;
+    top: 24px;
+}
+.answers-area .answer input:checked + label{
+    background: #2c9ed8bf;
+}
+
+.answers-area .answer label {
+    padding: 20px 35px;
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    box-shadow: 1px 4px 4px #0000007a;
+}
+.answers-area .answer label:hover p {
+    padding-left: 10px;
+    transition: .3s;
+}
+
+/* ---------------------------- */
+
+button.submit {
+    background: #0075ff;
+    border: navajowhite;
+    padding: 20px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 8px;
+    color: white;
+    font-size: 24px;
+    width: 60%;
+    transition: .4s;
+    cursor: pointers;
+}
+button.submit:hover {
+    background: #2f81e0;
+    transform: scale(1.1);
+}
+/* ---------------------------- */
+.bullets {
+    padding: 20px;
+    background: white;
+    margin-top: 15px;
+    display: flex;
+}
+.bullets > * {
+    flex: 1;
+}
+
+.bullets .countdown {
+    text-align: right;
+    height: 30px;
+    line-height: 30px;
+}
+.bullets .spans {
+    display: flex;
+    gap: 10px;
+}
+.bullets .spans span {
+    background: #dce9f0;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+.bullets .spans span.active {
+    background: #5fb2de;
+}
+/* ---------------------------- */
+
+.results span {
+    font-weight: bold;
+}
+.results span.bad {
+    color: red;
+    
+}
+.results span.good {
+    color: green;
+}
+.results span.perfect {
+    color: #7272d8;
+    
+}
